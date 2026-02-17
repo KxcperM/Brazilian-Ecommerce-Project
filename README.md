@@ -10,10 +10,10 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 - **`ROW_NUMBER()` window function** to identify the primary payment method per order in a single table scan, without correlated subqueries
 - **`PERCENTILE_CONT(0.5)`** for true median imputation of NULL product dimensions, this is more statistically robust than using averages on skewed data
 - **`EXTRACT()` and `TO_CHAR()`** for clean timestamp decomposition into year, month, quarter and day name
-- **EPOCH-based delivery durations** — `EXTRACT(EPOCH FROM (ts2 - ts1)) / 86400` for precise day-level delivery calculations
+- **EPOC based delivery durations** use `EXTRACT(EPOCH FROM (ts2 - ts1)) / 86400` for precise day level delivery calculations
 - **`SUM() FILTER (WHERE ...)`** to pivot payment types into columns, which is cleaner and faster than `CASE WHEN` aggregations
 - **Deduplication** of 1M geolocation rows down to 19k representative zip-level coordinates via `AVG(lat/lng) GROUP BY zip`
-- **Data quality flags** — `date_logic_error_flag` surfaces orders where delivery timestamp precedes purchase timestamp
+- **Data quality flags** the `date_logic_error_flag` surfaces orders where delivery timestamp precedes purchase timestamp
 
 ---
 
@@ -77,7 +77,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ---
 
-## Data Model
+## Power BI Data Model
 
 ```
 DateTable                                  dim_customers ─────── dim_products
