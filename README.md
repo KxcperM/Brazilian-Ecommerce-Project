@@ -6,8 +6,6 @@ This project is a full data pipeline built on the Olist Brazilian Ecommerce data
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
----
-
 
 ## Project Pipeline
 
