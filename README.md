@@ -3,7 +3,7 @@ A full data pipeline built on the Olist Brazilian E-Commerce dataset from Kaggle
 
 ## SQL Transformation Highlights
 
-The transformation script [`CleanEcommerceData.sql`] demonstrates:
+The transformation script `CleanEcommerceData.sql` demonstrates:
 
 - **CTEs** to break complex multi-source logic into readable, auditable steps
 - **`NTILE(4)` window function** for seller revenue quartile banding — replaces the correlated subquery workaround required in SQLite
