@@ -19,7 +19,7 @@ PostgreSQL (Staging, profiling, cleaning & transformation)
   • dim_customers   (cleaned, geocoded, state names mapped)
   • dim_products    (translated categories, imputed dimensions, size tiers)
        ↓
-Power BI (Star schema model, DAX measures, 4-page interactive report)
+Power BI (Star schema model, DAX measures, 4 page interactive report)
 ```
 
 ## SQL Transformation Highlights
