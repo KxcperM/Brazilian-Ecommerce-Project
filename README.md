@@ -80,32 +80,31 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 ## Data Model
 
 ```
-dim_customers ──────────────────────────── dim_products
-(customer_id PK)                           (product_id PK)
-customer_city                              product_category_english
-customer_state_full                        product_size_tier
-latitude / longitude                       product_weight_tier
-has_geolocation                            product_volume_cm3
-       │ Many-to-One                       Many-to-One │
-       │                                               │
-       └──────────────── fact_orders ─────────────────┘
-                         (order_id, order_item_id)
-                         customer_id FK
-                         product_id FK
-                         seller_id
-                         purchase_date
-                         order_status_group
-                         actual_delivery_days
-                         delivery_timeliness
-                         delivery_speed_tier
-                         item_price / freight_value / item_total
-                         primary_payment_method
-                         avg_review_score
-                         review_sentiment
-                         seller_revenue_quartile
+DateTable                                  dim_customers ─────── dim_products
+(Date PK)                                  (customer_id PK)      (product_id PK)
+Year                                       customer_city         product_category_english
+Month / Month Name                         customer_state_full   product_size_tier
+Quarter                                    latitude / longitude  product_weight_tier
+Week                                       has_geolocation       product_volume_cm3
+Day Name                                           │                         │
+       │ One-to-Many                               │ Many-to-One             │ Many-to-One
+       │                                           │                         │
+       └───────────────────── fact_orders ─────────┴─────────────────────────┘
+                              (order_id, order_item_id)
+                              customer_id FK
+                              product_id FK
+                              seller_id
+                              purchase_date FK → DateTable
+                              order_status_group
+                              actual_delivery_days
+                              delivery_timeliness
+                              delivery_speed_tier
+                              item_price / freight_value / item_total
+                              primary_payment_method
+                              avg_review_score
+                              review_sentiment
+                              seller_revenue_quartile
 ```
-
----
 
 ## Dataset
 
