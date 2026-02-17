@@ -129,6 +129,17 @@ Day Name                                           │                         �
                               seller_revenue_quartile
 ```
 
+## Files in this Repository
+
+| File                                   | Description                                      |
+|----------------------------------------|--------------------------------------------------|
+| `compressed_fact_orders.csv.gz`        | Compressed fact_orders table due to size limits  |
+| `dim_customers.csv`                    | Customer dimension table                         |
+| `dim_products.csv`                     | Product dimension table                          |
+| `olist_report.pbix`                    | Raw Power BI Desktop file                        |
+| `olist_report.pdf`                     | 4 Report Page Visualisations                     |
+| `CleanEcommerceData.sql`               | PostgreSQL file used to generate the transform the data and generate the fact & dim tables |
+
 ## Dataset
 
 **Source:** [Olist Brazilian E-Commerce Public Dataset — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
