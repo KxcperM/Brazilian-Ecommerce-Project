@@ -140,7 +140,7 @@ Day Name                                           │                         �
 | `olist_report.pdf`                     | 4 Report page visualisations                     |
 | `CleanEcommerceData.sql`               | PostgreSQL file used to transform the data and generate the fact & dim tables |
 
-## Dataset
+## Dirty Dataset Used
 
 **Source:** [Olist Brazilian E-Commerce Public Dataset — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
