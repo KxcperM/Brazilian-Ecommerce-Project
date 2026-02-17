@@ -137,6 +137,8 @@ Day Name                                           â”‚                         â
 | `olist_report.pbix`                    | Raw Power BI Desktop file                        |
 | `olist_report.pdf`                     | 4 Report page visualisations                     |
 | `CleanEcommerceData.sql`               | PostgreSQL file used to transform the data and generate the fact & dim tables |
+| `README.md`                            | Current file                                     |
+
 
 ## Dataset 
 
