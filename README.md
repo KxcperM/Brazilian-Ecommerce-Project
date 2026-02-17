@@ -42,7 +42,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ## Report Pages & Key Insights
 
-### Page 1 — Executive Overview
+### Page 1: Executive Overview
 
 > High level business health across the full dataset
 
@@ -62,7 +62,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ---
 
-### Page 2 — Customer & Geography
+### Page 2: Customer & Geography
 
 > Revenue and order concentration across Brazil's 26 states
 
@@ -75,7 +75,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ---
 
-### Page 3 — Product Performance
+### Page 3: Product Performance
 
 > Category level revenue and product data quality
 
@@ -87,7 +87,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ---
 
-### Page 4 — Delivery & Seller Performance
+### Page 4: Delivery & Seller Performance
 
 > Operational efficiency and the link between logistics and customer satisfaction
 
@@ -100,7 +100,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ---
 
-## Power BI Data Model
+## Power BI Data Model & Relationships
 
 ```
 DateTable                                  dim_customers ─────── dim_products
