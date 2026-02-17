@@ -137,8 +137,8 @@ Day Name                                           â”‚                         â
 | `dim_customers.csv`                    | Customer dimension table                         |
 | `dim_products.csv`                     | Product dimension table                          |
 | `olist_report.pbix`                    | Raw Power BI Desktop file                        |
-| `olist_report.pdf`                     | 4 Report Page Visualisations                     |
-| `CleanEcommerceData.sql`               | PostgreSQL file used to generate the transform the data and generate the fact & dim tables |
+| `olist_report.pdf`                     | 4 Report page visualisations                     |
+| `CleanEcommerceData.sql`               | PostgreSQL file used to transform the data and generate the fact & dim tables |
 
 ## Dataset
 
