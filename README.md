@@ -17,7 +17,7 @@ The transformation script [`02_transformation.sql`](sql/02_transformation.sql) d
 
 ---
 
-## 📊 Report Pages & Key Insights
+## Report Pages & Key Insights
 
 ### Page 1 — Executive Overview
 
@@ -25,11 +25,11 @@ The transformation script [`02_transformation.sql`](sql/02_transformation.sql) d
 
 | KPI | Value |
 |-----|-------|
-| 💰 Total Revenue | R$ 15.84M |
-| 📦 Total Orders | 99K |
-| 🛍️ Avg Order Value | R$ 160.58 |
-| ⭐ Avg Review Score | 4.03 / 5 |
-| 🚚 Late Delivery Rate | 7.85% |
+| Total Revenue | R$ 15.84M |
+| Total Orders | 99K |
+| Avg Order Value | R$ 160.58 |
+| Avg Review Score | 4.03 / 5 |
+| Late Delivery Rate | 7.85% |
 
 **Key Insights:**
 
@@ -42,8 +42,6 @@ The transformation script [`02_transformation.sql`](sql/02_transformation.sql) d
 ### Page 2 — Customer & Geography
 
 > Revenue and order concentration across Brazil's 26 states
-
-![Geography Page](exports/page2_geography.png)
 
 **Key Insights:**
 
@@ -79,7 +77,7 @@ The transformation script [`02_transformation.sql`](sql/02_transformation.sql) d
 
 ---
 
-## 🗂️ Data Model
+## Data Model
 
 ```
 dim_customers ──────────────────────────── dim_products
@@ -109,7 +107,7 @@ has_geolocation                            product_volume_cm3
 
 ---
 
-## 📌 Dataset
+## Dataset
 
 **Source:** [Olist Brazilian E-Commerce Public Dataset — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
