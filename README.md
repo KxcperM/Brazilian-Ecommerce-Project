@@ -140,9 +140,9 @@ Download all 9 CSV files from [Kaggle](https://www.kaggle.com/datasets/olistbr/b
 
 **3. Set up PostgreSQL**
 
-Create a new database in pgAdmin called `olist`, open the Query Tool and run:
+Create a new database in pgAdmin called `olist`, open the Query Tool and run phase 0 from this file:
 ```bash
-sql/01_create_tables.sql
+sql/CleanEcommerceData.sql
 ```
 This creates all 9 staging tables ready to receive the CSV data.
 
@@ -156,9 +156,9 @@ For each table in pgAdmin:
 
 **5. Run the transformation script**
 
-In the Query Tool, run:
+In the Query Tool, run phases 1-6 from the same file from step 3:
 ```bash
-sql/CleanEcommerceData
+sql/CleanEcommerceData.sql
 ```
 This profiles the raw data, builds the 3 output tables (`fact_orders`, `dim_customers`, `dim_products`) and runs validation queries to confirm row counts and check for orphaned keys.
 
