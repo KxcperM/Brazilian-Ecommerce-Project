@@ -12,7 +12,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 - **`EXTRACT()` and `TO_CHAR()`** for clean timestamp decomposition into year, month, quarter and day name
 - **EPOCH-based delivery durations** — `EXTRACT(EPOCH FROM (ts2 - ts1)) / 86400` for precise day-level delivery calculations
 - **`SUM() FILTER (WHERE ...)`** to pivot payment types into columns — cleaner and faster than `CASE WHEN` aggregations
-- **Deduplication** of ~1M geolocation rows down to ~19k representative zip-level coordinates via `AVG(lat/lng) GROUP BY zip`
+- **Deduplication** of 1M geolocation rows down to 19k representative zip-level coordinates via `AVG(lat/lng) GROUP BY zip`
 - **Data quality flags** — `date_logic_error_flag` surfaces orders where delivery timestamp precedes purchase timestamp
 
 ---
@@ -33,9 +33,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 **Key Insights:**
 
-- **Credit card dominates** at 78.44% of total revenue (R$ 12.43M), with boleto — a Brazilian bank slip payment method used by consumers without traditional card access — accounting for a further 17.94% (R$ 2.84M). This reflects Brazil's unique payments landscape and is a meaningful data point for any market entry analysis
-- **96K out of 99K orders reached Completed status**, representing a ~97% fulfilment rate — a strong operational baseline
-- The **7.85% late delivery rate represents approximately 7,800 orders** that missed their estimated delivery window. As Page 4 shows, late deliveries are the single biggest driver of negative reviews — making this the highest-priority operational metric in the dataset
+- **Credit card dominates** at 78.44% of total revenue (R$ 12.43M), with boleto which is a Brazilian bank slip payment method used by consumers without traditional card access. This accounts for a further 17.94% (R$ 2.84M). This reflects Brazil's unique payments landscape and is a meaningful data point for any market entry analysis
+- **96K out of 99K orders reached Completed status**, representing a 97% fulfilment rate which is a strong operational baseline
+- The **7.85% late delivery rate represents approximately 7,800 orders** that missed their estimated delivery window. As Page 4 shows, late deliveries are the single biggest driver of negative reviews, which makes this the highest priority operational metric in the dataset
 
 ---
 
@@ -45,7 +45,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 **Key Insights:**
 
-- **São Paulo state dominates with R$ 5.92M** in revenue — nearly 3× more than Rio de Janeiro (R$ 2.13M) in second place, reflecting Brazil's extreme economic concentration in the south-east
+- **São Paulo state dominates with R$ 5.92M** in revenue, this is nearly 3× more than Rio de Janeiro (R$ 2.13M) in second place, reflecting Brazil's extreme economic concentration in the south east
 - **São Paulo city alone generated R$ 2.17M**, more than the entire states of Bahia, Santa Catarina, and Distrito Federal combined
 - The filled map reveals a striking **north-south revenue divide**: south-eastern states (SP, RJ, MG) drive the overwhelming majority of revenue, while the vast northern states (Amazonas, Pará, Acre) show minimal activity — pointing to either significant untapped market potential or last-mile logistics barriers in the north
 - **Minas Gerais (R$ 1.86M)** and **Rio Grande do Sul (R$ 0.89M)** are the standout performers outside the São Paulo / Rio axis and represent the most viable expansion targets
@@ -58,9 +58,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 **Key Insights:**
 
-- **Health & Beauty** is the top revenue category at R$ 1.44M, followed by **Watches & Gifts** (R$ 1.31M) and **Bed, Bath & Table** (R$ 1.24M) — the top 3 are all lifestyle and discretionary purchases, not electronics or essentials as might be expected for an emerging e-commerce market
-- **Small and Large size tier products** generate the most revenue (R$ 4.5M and R$ 4.3M respectively), while Extra Small products (R$ 0.5M) significantly underperform — suggesting the platform is optimised for mid-to-large physical goods
-- The **Price vs Review Score scatter plot shows no meaningful positive correlation** — higher priced items do not reliably generate better reviews, meaning product quality and delivery experience matter more to customers than price point alone
+- **Health & Beauty** is the top revenue category at R$ 1.44M, followed by **Watches & Gifts** (R$ 1.31M) and **Bed, Bath & Table** (R$ 1.24M) — the top 3 are all lifestyle and discretionary purchases, not electronics or essentials as might be expected for an emerging ecommerce market
+- **Small and Large size tier products** generate the most revenue (R$ 4.5M and R$ 4.3M respectively), while Extra Small products (R$ 0.5M) significantly underperform which suggests the platform is optimised for mid-to-large physical goods
+- The **Price vs Review Score scatter plot shows no meaningful positive correlation** the higher priced items do not reliably generate better reviews, meaning product quality and delivery experience matter more to customers than price point alone
 
 ---
 
@@ -70,9 +70,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 **Key Insights:**
 
-- **The standout finding of the entire dataset:** review scores show a clear, consistent decline as delivery speed worsens. Express deliveries (1–3 days) achieve the highest review scores, while Very Slow deliveries (30+ days) score lowest — confirming that delivery speed is the primary driver of customer satisfaction on the platform
-- **89K orders arrived early vs only 8K late** — yet that 8K generates a disproportionate share of negative reviews given the score drop associated with late delivery. Reducing late deliveries is the single highest-leverage improvement available to Olist
-- **Freight cost as a % of item price shows no strong correlation with review score** — customers are significantly less sensitive to what they pay for shipping than they are to how fast it arrives. Speed matters more than price
+- **The standout finding of the entire dataset:** review scores show a clear, consistent decline as delivery speed worsens. Express deliveries (1–3 days) achieve the highest review scores, while Very Slow deliveries (30+ days) score lowest which confirms that delivery speed is the primary driver of customer satisfaction on the platform
+- **89K orders arrived early vs only 8K late** yet that 8K generates a disproportionate share of negative reviews given the score drop associated with late delivery. Reducing late deliveries is the single highest leverage improvement available to Olist
+- **Freight cost as a % of item price shows no strong correlation with review score** the customers are significantly less sensitive to what they pay for shipping than they are to how fast it arrives. Speed matters more than price
 - The **seller revenue quartile analysis** confirms a heavy concentration of revenue in the top 25% of sellers, which is typical of marketplace dynamics but highlights platform dependency risk
 
 ---
@@ -111,18 +111,18 @@ has_geolocation                            product_volume_cm3
 
 **Source:** [Olist Brazilian E-Commerce Public Dataset — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-**Coverage:** ~100,000 orders placed between 2016 and 2018 across Brazil
+**Coverage:** 100,000 orders placed between 2016 and 2018 across Brazil
 
 | Table | Rows |
 |-------|------|
-| olist_orders_dataset | ~99,441 |
-| olist_order_items_dataset | ~112,650 |
-| olist_order_payments_dataset | ~103,886 |
-| olist_order_reviews_dataset | ~99,224 |
-| olist_customers_dataset | ~99,441 |
-| olist_products_dataset | ~32,951 |
-| olist_sellers_dataset | ~3,095 |
-| olist_geolocation_dataset | ~1,000,163 |
+| olist_orders_dataset | 99,441 |
+| olist_order_items_dataset | 112,650 |
+| olist_order_payments_dataset | 103,886 |
+| olist_order_reviews_dataset | 99,224 |
+| olist_customers_dataset | 99,441 |
+| olist_products_dataset | 32,951 |
+| olist_sellers_dataset | 3,095 |
+| olist_geolocation_dataset | 1,000,163 |
 | product_category_name_translation | 71 |
 
 ---
