@@ -127,6 +127,54 @@ Day Name                                           │                         �
                               seller_revenue_quartile
 ```
 
+## How to Use
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/kxsper/olist-ecommerce-analysis.git
+```
+
+**2. Download the dataset**
+
+Download all 9 CSV files from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and save them to a local folder e.g. `C:/olist/data/`
+
+**3. Set up PostgreSQL**
+
+Create a new database in pgAdmin called `olist`, open the Query Tool and run:
+```bash
+sql/01_create_tables.sql
+```
+This creates all 9 staging tables ready to receive the CSV data.
+
+**4. Import the CSVs**
+
+For each table in pgAdmin:
+- Right click the table → **Import/Export Data** → **Import**
+- Select the corresponding CSV file
+- Set **Header** to ON and **Encoding** to UTF8
+- Click OK
+
+**5. Run the transformation script**
+
+In the Query Tool, run:
+```bash
+sql/CleanEcommerceData
+```
+This profiles the raw data, builds the 3 output tables (`fact_orders`, `dim_customers`, `dim_products`) and runs validation queries to confirm row counts and check for orphaned keys.
+
+**6. Export to CSV for Power BI**
+
+Right-click each output table in pgAdmin → **Import/Export Data** → **Export** → CSV, Header ON, Encoding UTF8. Or via psql:
+```sql
+\COPY fact_orders   TO 'C:/olist/fact_orders.csv'   CSV HEADER ENCODING 'UTF8';
+\COPY dim_customers TO 'C:/olist/dim_customers.csv' CSV HEADER ENCODING 'UTF8';
+\COPY dim_products  TO 'C:/olist/dim_products.csv'  CSV HEADER ENCODING 'UTF8';
+```
+
+**7. Open in Power BI**
+
+Open `powerbi/olist_report.pbix` in Power BI Desktop. If prompted to reconnect data sources, point each table to the corresponding exported CSV.
+
 ## Files in this Repository
 
 | File                                   | Description                                      |
