@@ -73,7 +73,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 **Key Insights:**
 
 - **São Paulo state dominates with R$ 5.92M** in revenue, this is nearly 3× more than Rio de Janeiro (R$ 2.13M) in second place, reflecting Brazil's extreme economic concentration in the south east
-- **São Paulo city alone generated R$ 2.17M**, more than the entire states of Bahia, Santa Catarina, and Distrito Federal combined
+- **São Paulo city alone generated R$ 2.17M**, more than the entire states of Bahia, Santa Catarina and Distrito Federal combined
 - The filled map reveals a striking **north south revenue divide**: south eastern states (SP, RJ, MG) drive the overwhelming majority of revenue, while the vast northern states (Amazonas, Pará, Acre) show minimal activity, which are pointing to either significant untapped market potential or last mile logistics barriers in the north
 - **Minas Gerais (R$ 1.86M)** and **Rio Grande do Sul (R$ 0.89M)** are the standout performers outside the São Paulo / Rio axis and represent the most viable expansion targets
 
@@ -82,14 +82,14 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 ### Page 3: Product Performance
 
 ![Product Performance Overview - Price vs Review, Top Categories & Revenue by Size Tier](images/ProductPerformance.JPG)
-*Scatter plot of item price vs avg review score (very slight positive), horizontal bars for top 10 categories by revenue (Health & Beauty leading), and revenue breakdown by product size tier (Small/Medium dominate). Insights show price has limited influence on satisfaction, while category and size drive volume.*
+*Scatter plot of item price vs avg review score (very slight positive), horizontal bars for top 10 categories by revenue (Health & Beauty leading) and revenue breakdown by product size tier (Small/Medium dominate). Insights show price has limited influence on satisfaction, while category and size drive volume.*
 
 > Category level revenue and product data quality
 
 **Key Insights:**
 
-- **Health & Beauty** is the top revenue category at R$ 1.44M, followed by **Watches & Gifts** (R$ 1.31M) and **Bed, Bath & Table** (R$ 1.24M) — the top 3 are all lifestyle and discretionary purchases, not electronics or essentials as might be expected for an emerging ecommerce market
-- **Small and Large size tier products** generate the most revenue (R$ 4.5M and R$ 4.3M respectively), while Extra Small products (R$ 0.5M) significantly underperform which suggests the platform is optimised for mid-to-large physical goods
+- **Health & Beauty** is the top revenue category at R$ 1.44M, followed by **Watches & Gifts** (R$ 1.31M) and **Bed, Bath & Table** (R$ 1.24M). The top 3 are all lifestyle and discretionary purchases, not electronics or essentials as might be expected for an emerging ecommerce market
+- **Small and Large size tier products** generate the most revenue (R$ 4.5M and R$ 4.3M respectively) while Extra Small products (R$ 0.5M) significantly underperform which suggests the platform is optimised for mid-to-large physical goods
 - The **Price vs Review Score scatter plot shows no meaningful positive correlation** the higher priced items do not reliably generate better reviews, meaning product quality and delivery experience matter more to customers than price point alone
 
 ---
