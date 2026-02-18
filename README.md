@@ -1,5 +1,5 @@
 # Brazilian Ecommerce Project
-This project is a full data pipeline built on the Olist Brazilian Ecommerce dataset from Kaggle. The raw CSV data across 9 files was imported into PostgreSQL, cleaned and transformed using advanced SQL, then modelled and visualised in Power BI.
+This project is a full data pipeline built on the Olist Brazilian Ecommerce dataset from Kaggle. The raw CSV data across 9 files was imported into PostgreSQL, cleaned and transformed using advanced SQL queries, then modelled and visualised in Power BI.
 
 ## Tech Stack
 
