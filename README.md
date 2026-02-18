@@ -43,7 +43,7 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 ### Page 1: Executive Overview
 
 ![Executive Summary - KPIs and Payment Breakdown](images/ExecOverview.JPG)
-*Total Revenue: R$15.84M | Late Delivery Impact Clearly Visible*
+*Total Revenue: R$15.84M (Late Delivery Impact Clearly Visible)*
 
 > High level business health across the full dataset
 
