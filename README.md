@@ -65,6 +65,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ### Page 2: Customer & Geography
 
+![Geographic Revenue Distribution by State](images/CustGeo.JPG)
+*São Paulo dominates ~37% of total revenue*
+
 > Revenue and order concentration across Brazil's 26 states
 
 **Key Insights:**
@@ -78,6 +81,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 
 ### Page 3: Product Performance
 
+![Product Performance Overview - Price vs Review, Top Categories & Revenue by Size Tier](images/ProductPerformance.JPG)
+*Combined dashboard view: Scatter plot of item price vs avg review score (no correlation), horizontal bars for top 10 categories by revenue (Health & Beauty leading), and revenue breakdown by product size tier (Small/Medium dominate). Insights show price has limited influence on satisfaction, while category and size drive volume.*
+
 > Category level revenue and product data quality
 
 **Key Insights:**
@@ -89,6 +95,9 @@ The transformation script `CleanEcommerceData.sql` demonstrates:
 ---
 
 ### Page 4: Delivery & Seller Performance
+
+![Delivery & Seller Performance Overview - Timeliness, Review Scores, and Freight Impact](images/DeliverySellerPerformance.JPG)
+*Combined view: 89K early vs 8K late orders (bar), sharp decline in avg review score by delivery speed tier (line), and no clear correlation in freight % vs review score (scatter). Speed drives satisfaction much more than cost.*
 
 > Operational efficiency and the link between logistics and customer satisfaction
 
