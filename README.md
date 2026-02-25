@@ -217,7 +217,3 @@ Open `powerbi/olist_report.pbix` in Power BI Desktop. If prompted to reconnect d
 | olist_sellers_dataset | 3,095 |
 | olist_geolocation_dataset | 1,000,163 |
 | product_category_name_translation | 71 |
-
----
-
-*Dataset provided by Olist, the largest department store in Brazilian marketplaces.*
